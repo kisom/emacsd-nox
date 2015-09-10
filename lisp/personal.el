@@ -1,6 +1,4 @@
-
-(unless window-system
-  (global-font-lock-mode 0))
+(setq-default global-font-lock-mode nil)
 
 ;; set up package handling
 (require 'package)
