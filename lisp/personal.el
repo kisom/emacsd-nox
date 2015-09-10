@@ -1,4 +1,4 @@
-(setq-default global-font-lock-mode nil)
+(global-font-lock-mode 0)
 
 ;; set up package handling
 (require 'package)
