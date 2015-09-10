@@ -1,0 +1,83 @@
+#+TITLE: emacsd-nox
+
+* Overview
+
+  This is an emacs configuration for hosts that aren't using a window manager; as these
+  are typically servers, their configuration is different from the "full" config.
+
+  Namely, this is optimised for the following:
+
+  + C and Go development
+  + Writing documentation with org-mode, plain text, restructured
+    text, and plain text.
+
+* Files
+
+** custom.el
+   
+   This is where customised variables live. It is loaded first so that
+   these may be applied as early as possible.
+
+** util.el
+
+   Utility functions that are general purpose in scope. The following
+   functions are provided:
+
+   + time-delta-to-number takes a time delta and returns an integer
+     value representing a floating-point second value.
+   + markdown-link->org converts markdown [title](link) to org-mode
+     \[[link][title]] links.
+   + org->markdown-link does the opposite of the previous.
+   + k-insert-timestamp inserts a YYYY-MM-DDTHH-MM-SSTZ timestamp such
+     as 2015-09-10T00:09:1441844293+0000.
+   + k-insert-date inserts a date of the form YYYY-MM-DD, such as
+     2015-09-10.
+   + fix-paste fixes code pastes that might use invalid characters,
+     such as smart quotes instead of ASCII quote characters.
+   + update-initial-packages updates the list of initial packages in
+     the inital-packages.el file. This list is appended so that it may
+     be compared to the previous value.
+   + woman-only prompts for a manual page entry, and brings up that entry
+     as the sole window.
+   + k-indent-buffer indents the entire buffer.
+
+   Many of these functions are associated with keybindings in later files.
+
+** personal.el
+
+   This contains keybindings and emacs settings that I find useful. Of note,
+   it turns off any extra decorations, selects marmalade and melpa as package
+   archive repositories, and sets the following key bindings:
+
+   + C-x m brings up eshell.
+   + C-x g brings up magit-status.
+   + C-x u brings up an undo tree.
+   + M-q fills the paragraph.
+   + C-x t brings up a bash ansi-term.
+   + C-c t t inserts a timestamp.
+   + C-c t d inserts a datestamp.
+   + C-h u prompts for a manual page and pulls it up with woman.
+   + C-h U prompts for a manual page and sets that manual pages as the
+     only window.
+
+** enabled.el
+
+   Any normally-disabled functions are enabled here.
+
+** c.el
+
+   C development should be done with the [[http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man9/style.9?query=style&arch=i386][One True Style]].
+
+   This also enables xcscope and a gofmt-like format-buffer-on-save
+   hook to correctly indent C code on save. The customisation
+   "k-heathen-mode" may be used to suppress auto-formatting buffers
+   when view heathen code.
+
+** scpaste.el
+
+   This sets up the destination for scpaste.
+
+** go.el
+
+   Enables goimports-on-save and sets GOPATH as needed.
+
