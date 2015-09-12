@@ -53,3 +53,5 @@
 (global-set-key (kbd "C-h u") 'woman)
 (global-set-key (kbd "C-h U") 'woman-only)
 
+;; liberate the emacs OS
+(global-set-key (kbd "C-c b") 'surfraw)

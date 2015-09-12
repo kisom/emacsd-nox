@@ -10,6 +10,7 @@
   (setq lisp-base "~/.emacs.d/lisp/")
   (setq lisp-files '("custom.el"    ; first, load customized-*
 		     "util.el"      ; load any utilities needed
+		     "surfraw.el"   ;
 		     "personal.el"  ; any high-level customisations
 		     "enabled.el"   ; turn on any default-disabled functions
 		     "c.el"         ; for maximum fun

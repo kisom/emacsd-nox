@@ -43,6 +43,18 @@
 
    Many of these functions are associated with keybindings in later files.
 
+** surfraw.el
+
+   This provides an interface to
+   [[http://surfraw.alioth.debian.org][surfraw]] from inside emacs.
+
+   The following variables and functions are important:
+
+   + =*elvi-list*= stores the list of elvi for tab completion.
+   + =surfraw= is an interactive function that prompts the user for a
+     tab-completable (if =*elvi-list* is valid) list of elvi and the
+     arguments to pass to surfraw.
+
 ** personal.el
 
    This contains keybindings and emacs settings that I find useful. Of note,
@@ -59,6 +71,7 @@
    + C-h u prompts for a manual page and pulls it up with woman.
    + C-h U prompts for a manual page and sets that manual pages as the
      only window.
+   + C-c b brings up surfraw.
 
 ** enabled.el
 
