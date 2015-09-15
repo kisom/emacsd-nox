@@ -3,6 +3,7 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
+(require 'cl)
 
 (let ((startup-time (current-time)))
   (setq inhibit-startup-echo-area-message
