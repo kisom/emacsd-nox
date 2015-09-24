@@ -2,8 +2,8 @@
 ;;;; separated out so it can more easily be updated
 
 ;; get this package list with C-h v package-activated-list
-'(defvar initial-package-list
-   (
+(defvar initial-package-list
+   '(
 	async
 	dash
 	git-commit

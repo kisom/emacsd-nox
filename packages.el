@@ -4,9 +4,6 @@
 (require 'package)
 (package-initialize)
 
-(or (load (format "%sinitial-packages" lisp-base))
-    (load (format "%sinitial-packages" lisp-base)))
-
 (add-to-list 'package-archives
    '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
