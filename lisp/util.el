@@ -31,11 +31,11 @@
   (interactive)
   (save-excursion
     (beginning-of-buffer)
-    (replace-string "“" "\"")
-    (replace-string "”" "\"")
-    (replace-string "’" "'")
-    (replace-string "—" "---")
-    (replace-string "- " "")
+    (replace-string """ "\"")
+    (replace-string """ "\"")
+    (replace-string "'" "'")
+    (replace-string "---" "---")
+    (replace-string "" "")
     (message "paste fixed.")))
 
 (defun update-initial-packages ()
@@ -72,3 +72,10 @@ initial-packages.el buffer for review."
   (with-current-buffer (current-buffer)
     (save-excursion
       (indent-region (point-min) (point-max)))))
+
+(defun uuidgen ()
+  "Generate an insert a UUID."
+  (interactive)
+  (insert
+   (replace-regexp-in-string "\n\\'" ""
+			     (shell-command-to-string "uuidgen"))))
