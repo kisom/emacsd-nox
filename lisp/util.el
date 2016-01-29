@@ -19,9 +19,13 @@
   (while (search-forward-regexp "\\[\\[\\(.+?\\)\\]\\[\\(.+?\\)\\]\\]")
     (replace-match (format "[%s](%s)" (match-string 2) (match-string 1)))))
 
+(defun k-insert-timestamp-yaklog ()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d %H:%M")))
+
 (defun k-insert-timestamp ()
   (interactive)
-  (insert (format-time-string "%Y-%m-%dT%H:%m:%s%z")))
+  (insert (format-time-string "%Y-%m-%dT%H:%M:%s%z")))
 
 (defun k-insert-date ()
   (interactive)

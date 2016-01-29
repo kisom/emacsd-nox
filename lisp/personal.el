@@ -47,6 +47,7 @@
 
 ;; the timestamping functions are in util.el
 (global-set-key (kbd "C-c t t") 'k-insert-timestamp)
+(global-set-key (kbd "C-c t y") 'k-insert-timestamp-yaklog)
 (global-set-key (kbd "C-c t d") 'k-insert-date)
 
 ;; man-page lookups.

@@ -9,6 +9,10 @@
   (setq inhibit-startup-echo-area-message
 	"kyle")
   (setq lisp-base "~/.emacs.d/lisp/")
+
+  (setq custom-file "~/.emacs.d/lisp/custom.el")
+  (load custom-file)
+  
   (setq lisp-files '("custom.el"    ; first, load customized-*
 		     "util.el"      ; load any utilities needed
 		     "surfraw.el"   ;
@@ -40,3 +44,4 @@
 			startup-time))))))
 
 (global-font-lock-mode 0)
+
